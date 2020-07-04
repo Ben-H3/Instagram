@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -99,6 +99,9 @@
 		51DC273624AFDBF40077C59B = {
 			isa = PBXGroup;
 			children = (
+				51F3337424B1258200B4ACBD /* View Controllers */,
+				51F3337324B1257900B4ACBD /* Views */,
+				51F3337224B1256F00B4ACBD /* Models */,
 				51DC274124AFDBF50077C59B /* instagram */,
 				51DC275D24AFDBF60077C59B /* instagramTests */,
 				51DC276824AFDBF60077C59B /* instagramUITests */,
@@ -154,6 +157,27 @@
 			path = instagramUITests;
 			sourceTree = "<group>";
 		};
+		51F3337224B1256F00B4ACBD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		51F3337324B1257900B4ACBD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51F3337424B1258200B4ACBD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		63C3D5DBD08869EB4374B7BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +188,6 @@
 				1A346B1D4490CAFD06C7ADF5 /* Pods-instagramTests.debug.xcconfig */,
 				FA55D65FC72E69040C0FC3A7 /* Pods-instagramTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
