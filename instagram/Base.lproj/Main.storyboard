@@ -71,7 +71,7 @@
                         <outlet property="signIn" destination="11S-EF-CM8" id="c8h-NZ-ec8"/>
                         <outlet property="signUp" destination="2h9-aK-7X8" id="0Mh-hw-SlZ"/>
                         <outlet property="username" destination="fxN-Qy-91y" id="ZSI-0d-gLW"/>
-                        <segue destination="uEf-iq-Trj" kind="presentation" identifier="timelineSegue" id="i05-VQ-TUx"/>
+                        <segue destination="uEf-iq-Trj" kind="show" identifier="timelineSegue" id="VgW-AC-HMB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VF-Pz-JBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,15 +247,15 @@
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Get Photo:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vyd-1o-bvY">
-                                <rect key="frame" x="275" y="69" width="139" height="38"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Get Photo From..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vyd-1o-bvY">
+                                <rect key="frame" x="275" y="69" width="139" height="59.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-Ch-rrE">
-                                <rect key="frame" x="275" y="227" width="139" height="60"/>
+                                <rect key="frame" x="283" y="227" width="111" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
@@ -273,7 +273,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLX-og-8qc">
-                                <rect key="frame" x="275" y="141" width="139" height="60"/>
+                                <rect key="frame" x="283" y="141" width="111" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
@@ -296,21 +296,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="ObU-9f-Jp7">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Bhw-hM-cG3"/>
-                        <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="MtZ-Af-qFa"/>
+                        <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="MtZ-Af-qFa">
+                            <connections>
+                                <action selector="post:" destination="VZV-3d-6Jd" id="9QH-ly-4aa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bodyText" destination="Vm3-lb-Qfj" id="07l-c7-26x"/>
                         <outlet property="cameraButton" destination="WLX-og-8qc" id="tRp-i9-sSA"/>
-                        <outlet property="captionText" destination="Vm3-lb-Qfj" id="je5-2f-OQq"/>
                         <outlet property="galleryButton" destination="B9R-Ch-rrE" id="hdA-sj-euy"/>
-                        <outlet property="pictureView" destination="zU8-Hd-hAs" id="UKY-Nf-sPk"/>
+                        <outlet property="photo" destination="zU8-Hd-hAs" id="ivB-VZ-sBm"/>
+                        <outlet property="postButton" destination="MtZ-Af-qFa" id="X1W-wG-slv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoR-mQ-LKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="zRN-UE-ix9">
-                    <connections>
-                        <action selector="cameraRequestTapped:" destination="VZV-3d-6Jd" id="cUH-DS-dVq"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zRN-UE-ix9"/>
             </objects>
             <point key="canvasLocation" x="4357.971014492754" y="35.491071428571423"/>
         </scene>
@@ -349,7 +350,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUo-TS-JmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3447.826086956522" y="35.491071428571423"/>
+            <point key="canvasLocation" x="3480" y="35"/>
         </scene>
     </scenes>
     <resources>

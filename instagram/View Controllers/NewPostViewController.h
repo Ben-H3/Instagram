@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NewPostViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *photo;
+@property (weak, nonatomic) IBOutlet UITextView *bodyText;
+
 @end
 
 NS_ASSUME_NONNULL_END
