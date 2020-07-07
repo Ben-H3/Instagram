@@ -7,10 +7,12 @@
 //
 
 #import "TimelineViewController.h"
+#import "SignInViewController.h"
 #import "Post.h"
 #import "PostCell.h"
+#import "SceneDelegate.h"
 
-@interface TimelineViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TimelineViewController () <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -58,6 +60,22 @@
     [self.tableView reloadData];
     [self fetchPosts];
     [refreshControl endRefreshing];
+}
+
+- (IBAction)post:(id)sender {
+    
+}
+
+- (IBAction)logout:(id)sender {
+    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SignInViewController *signInViewController = [storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+    sceneDelegate.window.rootViewController = signInViewController;
+    
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        // PFUser.current() will now be nil
+    }];
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {

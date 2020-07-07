@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2749B88BC0955F10032DCF5E /* Pods_instagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C426BC59DC923818850F598C /* Pods_instagramTests.framework */; };
+		519FFA1B24B51014002CE1C4 /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519FFA1A24B51014002CE1C4 /* NewPostViewController.m */; };
 		51DC274424AFDBF50077C59B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DC274324AFDBF50077C59B /* AppDelegate.m */; };
 		51DC274724AFDBF50077C59B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DC274624AFDBF50077C59B /* SceneDelegate.m */; };
 		51DC274A24AFDBF50077C59B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DC274924AFDBF50077C59B /* ViewController.m */; };
@@ -46,6 +47,8 @@
 		0EB3BBCA01433B562BD60116 /* Pods-instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram.release.xcconfig"; path = "Target Support Files/Pods-instagram/Pods-instagram.release.xcconfig"; sourceTree = "<group>"; };
 		1A346B1D4490CAFD06C7ADF5 /* Pods-instagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramTests.debug.xcconfig"; path = "Target Support Files/Pods-instagramTests/Pods-instagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3523A95AE4396762F2ABCFEF /* Pods-instagram-instagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram-instagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-instagram-instagramUITests/Pods-instagram-instagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		519FFA1924B51014002CE1C4 /* NewPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewPostViewController.h; sourceTree = "<group>"; };
+		519FFA1A24B51014002CE1C4 /* NewPostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewPostViewController.m; sourceTree = "<group>"; };
 		51DC273F24AFDBF50077C59B /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DC274224AFDBF50077C59B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		51DC274324AFDBF50077C59B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,9 +114,6 @@
 		51DC273624AFDBF40077C59B = {
 			isa = PBXGroup;
 			children = (
-				51F3337424B1258200B4ACBD /* View Controllers */,
-				51F3337324B1257900B4ACBD /* Views */,
-				51F3337224B1256F00B4ACBD /* Models */,
 				51DC274124AFDBF50077C59B /* instagram */,
 				51DC275D24AFDBF60077C59B /* instagramTests */,
 				51DC276824AFDBF60077C59B /* instagramUITests */,
@@ -136,6 +136,9 @@
 		51DC274124AFDBF50077C59B /* instagram */ = {
 			isa = PBXGroup;
 			children = (
+				51F3337424B1258200B4ACBD /* View Controllers */,
+				51F3337324B1257900B4ACBD /* Views */,
+				51F3337224B1256F00B4ACBD /* Models */,
 				51DC274224AFDBF50077C59B /* AppDelegate.h */,
 				51DC274324AFDBF50077C59B /* AppDelegate.m */,
 				51DC274524AFDBF50077C59B /* SceneDelegate.h */,
@@ -194,6 +197,8 @@
 				51F3337624B1262A00B4ACBD /* SignInViewController.m */,
 				51F3337E24B13F8A00B4ACBD /* TimelineViewController.h */,
 				51F3337F24B13F8A00B4ACBD /* TimelineViewController.m */,
+				519FFA1924B51014002CE1C4 /* NewPostViewController.h */,
+				519FFA1A24B51014002CE1C4 /* NewPostViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				519FFA1B24B51014002CE1C4 /* NewPostViewController.m in Sources */,
 				51F3337724B1262A00B4ACBD /* SignInViewController.m in Sources */,
 				51F3338024B13F8A00B4ACBD /* TimelineViewController.m in Sources */,
 				51F3337A24B12B0600B4ACBD /* Post.m in Sources */,
