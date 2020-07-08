@@ -1,4 +1,4 @@
-# Project 4 - *Instagram*
+# Project 4 - Instagram
 
 **Instagram** is a photo sharing app using Parse as its backend.
 
