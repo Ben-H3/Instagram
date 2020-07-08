@@ -71,7 +71,7 @@
                         <outlet property="signIn" destination="11S-EF-CM8" id="c8h-NZ-ec8"/>
                         <outlet property="signUp" destination="2h9-aK-7X8" id="0Mh-hw-SlZ"/>
                         <outlet property="username" destination="fxN-Qy-91y" id="ZSI-0d-gLW"/>
-                        <segue destination="uEf-iq-Trj" kind="show" identifier="timelineSegue" id="VgW-AC-HMB"/>
+                        <segue destination="uEf-iq-Trj" kind="presentation" identifier="timelineSegue" id="orP-cF-VCo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VF-Pz-JBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -150,6 +150,9 @@
                                                         <constraint firstAttribute="height" constant="22" id="kgn-gD-esg"/>
                                                     </constraints>
                                                     <state key="normal" image="comment"/>
+                                                    <connections>
+                                                        <action selector="comment:" destination="Sly-W7-9EP" eventType="touchUpInside" id="T8l-1A-VdT"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -314,6 +317,7 @@
         <!--Navigation Controller-->
         <scene sceneID="nld-tJ-23x">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyX-5n-rB7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uEf-iq-Trj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="V3J-TB-c6W"/>
@@ -326,7 +330,6 @@
                         <segue destination="kLf-8P-Ua3" kind="relationship" relationship="rootViewController" id="SBR-1C-VkE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyX-5n-rB7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1760.8695652173915" y="35.491071428571423"/>
         </scene>
