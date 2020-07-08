@@ -81,7 +81,4 @@
     };
 }
 
-- (IBAction)comment:(id)sender {
-}
-
 @end

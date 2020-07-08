@@ -30,10 +30,6 @@
     [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)fetchPosts {
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     query.limit = 20;
@@ -60,10 +56,6 @@
     [self.tableView reloadData];
     [self fetchPosts];
     [refreshControl endRefreshing];
-}
-
-- (IBAction)post:(id)sender {
-    
 }
 
 - (IBAction)logout:(id)sender {

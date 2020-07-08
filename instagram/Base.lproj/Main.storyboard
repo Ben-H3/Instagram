@@ -98,7 +98,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="519"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wyj-LK-J2A">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_tab" translatesAutoresizingMaskIntoConstraints="NO" id="Wyj-LK-J2A">
                                                     <rect key="frame" x="8" y="8" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="4kg-p0-sWC"/>
@@ -118,17 +118,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb0-V2-gr1">
-                                                    <rect key="frame" x="12" y="433" width="38" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="38" id="MI4-VT-vqh"/>
-                                                        <constraint firstAttribute="height" constant="36" id="kgn-gD-esg"/>
-                                                    </constraints>
-                                                    <state key="normal" image="image_placeholder"/>
-                                                    <connections>
-                                                        <action selector="comment:" destination="Sly-W7-9EP" eventType="touchUpInside" id="T8l-1A-VdT"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yys-jH-38Z">
                                                     <rect key="frame" x="12" y="479" width="390" height="21.5"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
@@ -143,16 +132,24 @@
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9Y-Lw-4JH">
-                                                    <rect key="frame" x="58" y="432" width="54" height="37"/>
+                                                    <rect key="frame" x="41" y="432" width="49" height="37"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37" id="4xl-56-zZu"/>
                                                     </constraints>
-                                                    <state key="normal" title="  10" image="insta_camera_btn">
+                                                    <state key="normal" title="10" image="favor-icon">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="like:" destination="Sly-W7-9EP" eventType="touchUpInside" id="7ZI-d6-j2R"/>
                                                     </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb0-V2-gr1">
+                                                    <rect key="frame" x="13" y="440" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="MI4-VT-vqh"/>
+                                                        <constraint firstAttribute="height" constant="22" id="kgn-gD-esg"/>
+                                                    </constraints>
+                                                    <state key="normal" image="comment"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -160,18 +157,18 @@
                                                 <constraint firstItem="E9f-Pq-KAu" firstAttribute="leading" secondItem="ukY-PT-ROR" secondAttribute="leading" id="0VQ-jB-diX"/>
                                                 <constraint firstItem="E9f-Pq-KAu" firstAttribute="top" secondItem="Wyj-LK-J2A" secondAttribute="bottom" constant="19" id="33p-uL-6Xr"/>
                                                 <constraint firstAttribute="trailing" secondItem="yys-jH-38Z" secondAttribute="trailing" constant="12" id="773-a7-o8A"/>
-                                                <constraint firstItem="yys-jH-38Z" firstAttribute="leading" secondItem="gb0-V2-gr1" secondAttribute="leading" id="8Ab-09-onM"/>
+                                                <constraint firstItem="yys-jH-38Z" firstAttribute="leading" secondItem="gb0-V2-gr1" secondAttribute="leading" constant="-1" id="8Ab-09-onM"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yys-jH-38Z" secondAttribute="bottom" constant="11.5" id="BNt-QW-eZw"/>
                                                 <constraint firstAttribute="trailing" secondItem="E9f-Pq-KAu" secondAttribute="trailing" id="Fde-CS-3Js"/>
-                                                <constraint firstItem="gb0-V2-gr1" firstAttribute="leading" secondItem="ukY-PT-ROR" secondAttribute="leading" constant="12" id="LKa-jX-Oq0"/>
+                                                <constraint firstItem="gb0-V2-gr1" firstAttribute="leading" secondItem="ukY-PT-ROR" secondAttribute="leading" constant="13" id="LKa-jX-Oq0"/>
                                                 <constraint firstItem="Wyj-LK-J2A" firstAttribute="top" secondItem="ukY-PT-ROR" secondAttribute="top" constant="8" id="Nyo-0t-RTJ"/>
-                                                <constraint firstItem="S9Y-Lw-4JH" firstAttribute="leading" secondItem="gb0-V2-gr1" secondAttribute="trailing" constant="8" id="WIh-16-BuV"/>
-                                                <constraint firstItem="yys-jH-38Z" firstAttribute="top" secondItem="gb0-V2-gr1" secondAttribute="bottom" constant="10" id="WZO-EL-75E"/>
+                                                <constraint firstItem="S9Y-Lw-4JH" firstAttribute="leading" secondItem="gb0-V2-gr1" secondAttribute="trailing" constant="6" id="WIh-16-BuV"/>
+                                                <constraint firstItem="yys-jH-38Z" firstAttribute="top" secondItem="gb0-V2-gr1" secondAttribute="bottom" constant="17" id="WZO-EL-75E"/>
                                                 <constraint firstItem="S9Y-Lw-4JH" firstAttribute="top" secondItem="E9f-Pq-KAu" secondAttribute="bottom" id="XKf-Ha-gHP"/>
                                                 <constraint firstItem="LGm-gw-2ey" firstAttribute="leading" secondItem="Wyj-LK-J2A" secondAttribute="trailing" constant="19" id="Zxk-qd-ZS7"/>
                                                 <constraint firstItem="LGm-gw-2ey" firstAttribute="centerY" secondItem="Wyj-LK-J2A" secondAttribute="centerY" id="iKJ-UH-2tG"/>
                                                 <constraint firstItem="h1i-DH-JNy" firstAttribute="bottom" secondItem="LGm-gw-2ey" secondAttribute="bottom" id="kMF-bh-Xuu"/>
-                                                <constraint firstItem="gb0-V2-gr1" firstAttribute="top" secondItem="E9f-Pq-KAu" secondAttribute="bottom" constant="1" id="mKz-PY-taA"/>
+                                                <constraint firstItem="gb0-V2-gr1" firstAttribute="top" secondItem="E9f-Pq-KAu" secondAttribute="bottom" constant="8" id="mKz-PY-taA"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="h1i-DH-JNy" secondAttribute="trailing" constant="5" id="vix-cI-BmK"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -199,7 +196,6 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="9ZH-jZ-ubc">
                             <connections>
-                                <action selector="post:" destination="kLf-8P-Ua3" id="wXZ-II-jGh"/>
                                 <segue destination="26q-K1-7y5" kind="presentation" id="ySD-XK-RZv"/>
                             </connections>
                         </barButtonItem>
@@ -354,7 +350,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="comment" width="50" height="50"/>
+        <image name="favor-icon" width="30" height="30"/>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
+        <image name="profile_tab" width="25" height="25"/>
     </resources>
 </document>

@@ -24,6 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
 - (IBAction)loginUser:(id)sender {
     NSString *username = self.username.text;
     NSString *password = self.password.text;
