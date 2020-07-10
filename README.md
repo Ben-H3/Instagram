@@ -58,7 +58,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 ## Notes
 
-Learning to use Parse was definitely a challenge, especially figuring out how to implement the various methods for logging in/out a user, storing their posts, and then displaying these posts in a table view.
+Learning to use Parse was definitely a challenge, especially figuring out how to implement the various methods for logging in/out a user, storing their posts, and then displaying these posts in a table view. I am definitely excited to continue learning more about the intricacies of Parse as I continue developing apps.
 
 ## License
 
