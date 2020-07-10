@@ -19,7 +19,9 @@
 // (https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application?language=objc)
 // Put in tasks that are final initialization steps before window loads
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // initialize the parse client with proper key's as created through Heroku (Parse Server)
+    // Initialize the parse client with proper key's as created through Heroku (Parse Server)
+    // This block creates a new SDK configuration object, set parameters, and then be initialized
+    // (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/ParseClientConfiguration.html#/c:objc(cs)ParseClientConfiguration(cm)configurationWithBlock:)
     ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         configuration.applicationId = @"instagramAppId";
         configuration.clientKey = @"instagramMasterKey";
