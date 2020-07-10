@@ -20,7 +20,8 @@
 @implementation NewPostViewController
 
 - (IBAction)useCamera:(id)sender {
-    // Utilize UIImagePickerController to determine whether or not camera available (https://developer.apple.com/documentation/uikit/uiimagepickercontroller)
+    // Utilize UIImagePickerController to determine whether or not camera available
+    // (https://developer.apple.com/documentation/uikit/uiimagepickercontroller)
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
@@ -45,7 +46,8 @@
     [self presentViewController:imagePickerVC animated:YES completion:nil];
 }
 
-// This function allows for quick edits to and/or examination of an asset right after the user selects it (https://developer.apple.com/documentation/uikit/uiimagepickercontrollerdelegate/1619126-imagepickercontroller)
+// This function allows for quick edits to and/or examination of an asset right after the user selects it
+// (https://developer.apple.com/documentation/uikit/uiimagepickercontrollerdelegate/1619126-imagepickercontroller)
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     // Get the image captured by the UIImagePickerController
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
@@ -62,9 +64,11 @@
     // Fill the view fully, clipping small portions of the image if necessary
     resizeImageView.contentMode = UIViewContentModeScaleAspectFill;
     resizeImageView.image = image;
-    // Create a new graphics context of given size and set it as the current graphics context (https://developer.apple.com/documentation/uikit/1623922-uigraphicsbeginimagecontext?language=objc)
+    // Create a new graphics context of given size and set it as the current graphics context
+    // (https://developer.apple.com/documentation/uikit/1623922-uigraphicsbeginimagecontext?language=objc)
     UIGraphicsBeginImageContext(size);
-    // Render resized image in this new graphics context (https://developer.apple.com/documentation/quartzcore/calayer/1410909-renderincontext)
+    // Render resized image in this new graphics context
+    // (https://developer.apple.com/documentation/quartzcore/calayer/1410909-renderincontext)
     [resizeImageView.layer renderInContext:UIGraphicsGetCurrentContext()];
     // Store the image now rendered based on current graphics context
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();

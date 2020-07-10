@@ -40,7 +40,8 @@
     newPost.likeCount = @(0);
     newPost.commentCount = @(0);
     newPost.timeStamp = [NSDate date];
-    // This function saves the new Post asynchronously within Parse for later use/modification (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFFileObject.html#/c:objc(cs)PFFileObject(im)saveInBackgroundWithBlock:)
+    // This function saves the new Post asynchronously within Parse for later use/modification
+    // (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFFileObject.html#/c:objc(cs)PFFileObject(im)saveInBackgroundWithBlock:)
     [newPost saveInBackgroundWithBlock: completion];
 }
 

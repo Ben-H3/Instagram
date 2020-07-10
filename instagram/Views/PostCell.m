@@ -25,7 +25,8 @@
     self.date.text = dateString;
     // Load in profile picture
     PFFileObject *proPic = [user valueForKey:@"proPic"];
-    // Parse method that will asynchronously collect the data from cache if available or fetches its contents from the network if necessary (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFFileObject.html#/c:objc(cs)PFFileObject(im)getDataInBackgroundWithBlock:)
+    // Parse method that will asynchronously collect the data from cache if available or fetches its contents from the network if necessary
+    // (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFFileObject.html#/c:objc(cs)PFFileObject(im)getDataInBackgroundWithBlock:)
     [proPic getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
@@ -52,7 +53,8 @@
     // Load in correctly colored like button
     if([self.post[@"liked"] isEqual:@YES]) {
         UIImage *image = [UIImage imageNamed:@"favor-icon-red"];
-        // These two following methods set the image and title for the button at a certain state (https://developer.apple.com/documentation/uikit/uibutton/1623997-setimage?language=objc)
+        // These two following methods set the image and title for the button at a certain state
+        // (https://developer.apple.com/documentation/uikit/uibutton/1623997-setimage?language=objc)
         // We chose UIControlStateNormal since this occurs when the button is enabled but neither selected nor highlighted
         [self.likeButton setImage:image forState:UIControlStateNormal];
         [self.likeButton setTitle:[NSString stringWithFormat:@"%@", self.post.likeCount] forState:UIControlStateNormal];
@@ -71,7 +73,8 @@
         int numLiked = [self.post.likeCount intValue];
         // Convert back the other way using function (from int to NSNumber object to be stored in Post object)
         self.post.likeCount = [NSNumber numberWithInteger:(numLiked - 1)];
-        // This function saves the new Post asynchronously within Parse for later use/modification (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFFileObject.html#/c:objc(cs)PFFileObject(im)saveInBackgroundWithBlock:)
+        // This function saves the new Post asynchronously within Parse for later use/modification
+        // (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFFileObject.html#/c:objc(cs)PFFileObject(im)saveInBackgroundWithBlock:)
         [self.post saveInBackgroundWithBlock:nil];
         UIImage *image = [UIImage imageNamed:@"favor-icon"];
         [self.likeButton setImage:image forState:UIControlStateNormal];

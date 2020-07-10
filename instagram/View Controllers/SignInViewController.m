@@ -23,7 +23,8 @@
 - (IBAction)loginUser:(id)sender {
     NSString *username = self.username.text;
     NSString *password = self.password.text;
-    // Parse method makes asynchronous request to log in user. Automatically sets currentUser getter/setter methods to store new user if login credentials are correct. (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFUser.html#/c:objc(cs)PFUser(cm)logInWithUsernameInBackground:password:block:)
+    // Parse method makes asynchronous request to log in user. Automatically sets currentUser getter/setter methods to store new user if login credentials are correct.
+    // (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFUser.html#/c:objc(cs)PFUser(cm)logInWithUsernameInBackground:password:block:)
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         if (error != nil) {
             NSLog(@"User log in failed: %@", error.localizedDescription);
@@ -40,7 +41,8 @@
     // Set user properties
     newUser.username = self.username.text;
     newUser.password = self.password.text;
-    // Sign up a new user asynchronously to access the app. Will automatically enforce that the username is not already taken. (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFUser.html#/c:objc(cs)PFUser(im)signUpInBackgroundWithBlock:)
+    // Sign up a new user asynchronously to access the app. Will automatically enforce that the username is not already taken.
+    // (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFUser.html#/c:objc(cs)PFUser(im)signUpInBackgroundWithBlock:)
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);

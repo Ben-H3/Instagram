@@ -28,7 +28,8 @@
     [dateFormatter setDateFormat:@"MM-dd-yyyy"];
     NSString *dateString = [dateFormatter stringFromDate:date];
     self.date.text = dateString;
-    // Parse method that will asynchronously collect the data from cache if available or fetches its contents from the network if necessary (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFFileObject.html#/c:objc(cs)PFFileObject(im)getDataInBackgroundWithBlock:)
+    // Parse method that will asynchronously collect the data from cache if available or fetches its contents from the network if necessary
+    // (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFFileObject.html#/c:objc(cs)PFFileObject(im)getDataInBackgroundWithBlock:)
     [self.post.image getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);

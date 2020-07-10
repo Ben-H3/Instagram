@@ -26,14 +26,16 @@
     self.tableView.dataSource = self;
     [self fetchPosts];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    // Use this instance method to associate action of making network call to update posts with a control event changing (i.e. reshresh control fully pulled) (https://developer.apple.com/documentation/uikit/uicontrol/1618259-addtarget?language=objc)
+    // Use this instance method to associate action of making network call to update posts with a control event changing (i.e. reshresh control fully pulled)
+    // (https://developer.apple.com/documentation/uikit/uicontrol/1618259-addtarget?language=objc)
     [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:refreshControl atIndex:0];
     [self.tableView reloadData];
 }
 
 - (void)fetchPosts {
-    // Create query to view 20 posts stored in Parse by using PFQuery class instance method (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFQuery.html#/c:objc(cs)PFQuery(cm)queryWithClassName:)
+    // Create query to view 20 posts stored in Parse by using PFQuery class instance method
+    // (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFQuery.html#/c:objc(cs)PFQuery(cm)queryWithClassName:)
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     query.limit = 20;
     // Make sure to account for all necessary keys needed for displaying posts on screen
@@ -41,7 +43,8 @@
     [query includeKey:@"author"];
     [query includeKey:@"caption"];
     [query includeKey:@"image"];
-    // Use this Parse method to find posts in database asynchronously and store them into posts array (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFQuery.html#/c:objc(cs)PFQuery(im)findObjectsInBackgroundWithBlock:)
+    // Use this Parse method to find posts in database asynchronously and store them into posts array
+    // (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFQuery.html#/c:objc(cs)PFQuery(im)findObjectsInBackgroundWithBlock:)
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
             NSLog(@"Sucess fetching posts!");
@@ -56,7 +59,8 @@
 
 // This action will makes a network request to get updated data, update the tableView with the new data, and then hide the RefreshControl
 - (void)beginRefresh:(UIRefreshControl *)refreshControl {
-    // Create the network session with default configuration (caching policies, timeouts, proxies), delegate (not necessary as no additional authentication), and queue (simply use operation queue associated with the main thread).  (https://developer.apple.com/documentation/foundation/nsurlsession/1411597-sessionwithconfiguration?language=objc)
+    // Create the network session with default configuration (caching policies, timeouts, proxies), delegate (not necessary as no additional authentication), and queue (simply use operation queue associated with the main thread).
+    // (https://developer.apple.com/documentation/foundation/nsurlsession/1411597-sessionwithconfiguration?language=objc)
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
                                                           delegate:nil
                                                      delegateQueue:[NSOperationQueue mainQueue]];
@@ -74,7 +78,8 @@
     SignInViewController *signInViewController = [storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
     // Set the new root view controller to be the sign in view controller (since user now signed out of timeline)
     sceneDelegate.window.rootViewController = signInViewController;
-    // Parse method that asynchronously logs out the currently logged in user (setting currentUser to nil in the process) (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFUser.html#/c:objc(cs)PFUser(cm)logOutInBackgroundWithBlock:)
+    // Parse method that asynchronously logs out the currently logged in user (setting currentUser to nil in the process)
+    // (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFUser.html#/c:objc(cs)PFUser(cm)logOutInBackgroundWithBlock:)
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
