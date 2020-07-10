@@ -20,22 +20,16 @@
 
 @implementation SignInViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
 - (IBAction)loginUser:(id)sender {
     NSString *username = self.username.text;
     NSString *password = self.password.text;
-    
+    // Parse method makes asynchronous request to log in user. Automatically sets currentUser getter/setter methods to store new user if login credentials are correct. (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFUser.html#/c:objc(cs)PFUser(cm)logInWithUsernameInBackground:password:block:)
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         if (error != nil) {
             NSLog(@"User log in failed: %@", error.localizedDescription);
         } else {
             NSLog(@"User logged in successfully");
-            
-            // display view controller that needs to shown after successful login
+            // Display view controller that needs to shown after successful login
             [self performSegueWithIdentifier:@"timelineSegue" sender:nil];
         }
     }];
@@ -43,19 +37,16 @@
 - (IBAction)registerUser:(id)sender {
     // initialize a user object
     PFUser *newUser = [PFUser user];
-    
-    // set user properties
+    // Set user properties
     newUser.username = self.username.text;
     newUser.password = self.password.text;
-    
-    // call sign up function on the object
+    // Sign up a new user asynchronously to access the app. Will automatically enforce that the username is not already taken. (https://parseplatform.org/Parse-SDK-iOS-OSX/api/Classes/PFUser.html#/c:objc(cs)PFUser(im)signUpInBackgroundWithBlock:)
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
         } else {
             NSLog(@"User registered successfully");
-            
-            // manually segue to logged in view
+            // Manually segue to logged in view
             [self performSegueWithIdentifier:@"timelineSegue" sender:nil];
         }
     }];

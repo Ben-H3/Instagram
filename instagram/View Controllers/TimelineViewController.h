@@ -12,8 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TimelineViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray * posts;
 
 @end

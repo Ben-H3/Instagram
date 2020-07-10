@@ -15,10 +15,10 @@
 
 @implementation AppDelegate
 
-
+// Function called when launch process is almost done and the app is almost ready to run (https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application?language=objc)
+// Put in tasks that are final initialization steps before window loads
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
+    // initialize the parse client with proper key's as created through Heroku (Parse Server)
     ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         configuration.applicationId = @"instagramAppId";
         configuration.clientKey = @"instagramMasterKey";
@@ -26,9 +26,11 @@
     }];
     [Parse initializeWithConfiguration:configuration];
     
+    // Check if the user is not nil (meaning that there has already been a sign in and we want to keep this sign in even if the app closes)
     if (PFUser.currentUser) {
+        // Set the root controller to the TimelineViewController (instead of the SignInViewController)
+        // Want this if user already signed in (not make them log in again)
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
         self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimelineViewController"];
     }
     

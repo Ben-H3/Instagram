@@ -22,7 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSNumber *commentCount;
 @property (nonatomic, strong) NSDate *timeStamp;
 
-+ (void) postUserImage: ( UIImage * _Nullable )image withCaption: ( NSString * _Nullable )caption withCompletion: (PFBooleanResultBlock  _Nullable)completion;
+// Public method to create a new Post that will be called by the new post VC
++ (void) createNewPost: ( UIImage * _Nullable )image withCaption: ( NSString * _Nullable )caption withCompletion: (PFBooleanResultBlock  _Nullable)completion;
 
 @end
 
