@@ -29,14 +29,6 @@
     }];
     [Parse initializeWithConfiguration:configuration];
     
-    // Check if the user is not nil (meaning that there has already been a sign in and we want to keep this sign in even if the app closes)
-    if (PFUser.currentUser) {
-        // Set the root controller to the TimelineViewController (instead of the SignInViewController)
-        // Want this if user already signed in (not make them log in again)
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimelineViewController"];
-    }
-    
     return YES;
 }
 

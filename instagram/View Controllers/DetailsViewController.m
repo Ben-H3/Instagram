@@ -40,7 +40,7 @@
             self.image.image = postImageView.image;
         }
     }];
-    // Convert from object NSNumber to NSString using built in intValue function
+    // Convert from object NSNumber to NSString using built in stringValue function
     NSString *numLiked = [self.post.likeCount stringValue];
     if ([self.post.likeCount isEqual: @1]) {
         self.likeLabel.text = [numLiked stringByAppendingString:@" Like"];
