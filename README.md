@@ -1,12 +1,12 @@
-# Project 4 - Instagram
+# Instagram
 
 **Instagram** is a photo sharing app using Parse as its backend.
 
-Time spent: **40** hours spent in total
+Time spent: **60** hours spent in total
 
 ## User Stories
 
-The following **required** functionality is completed:
+The following features are implemented:
 
 - [x] User can sign up to create a new account using Parse authentication
 - [x] User can log in and log out of his or her account
@@ -15,9 +15,6 @@ The following **required** functionality is completed:
 - [x] User can view the last 20 posts submitted to "Instagram"
 - [x] User can pull to refresh the last 20 posts submitted to "Instagram"
 - [x] User can tap a post to view post details, including timestamp and caption.
-
-The following **optional** features are implemented:
-
 - [x] Run your app on your phone and use the camera to take the photo
 - [x] Style the login page to look like the real Instagram login page.
 - [x] Style the feed to look like the real Instagram feed.
@@ -27,15 +24,7 @@ The following **optional** features are implemented:
 - [x] User can comment on a post and see all comments for each post in the post details screen.
 - [x] User can like a post and see number of likes for each post in the post details screen.
 - [x] Implement a custom camera view.
-
-The following **additional** features are implemented:
-
 - [x] Added extensive error checking to verify various events occured (posts load correctly, user properly logged out, etc.)
-
-Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
-
-1. Did anyone discover any unique features they could implement with Parse?
-2. How did people try to improve their UI?
 
 ## Video Walkthrough
 
